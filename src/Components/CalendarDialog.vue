@@ -36,10 +36,7 @@
       @on-next-calendar="onNextCalendar"
     />
     <div class="vdpr-datepicker__calendar-actions">
-      <div class="vdpr-datepicker__calendar-input-wrapper">
-        <span>{{ switchButtonLabel }}</span>
-        <switch-button :checked="isAllDay" @on-check-change="onCheckChange" />
-      </div>
+      
       <div class="vdpr-datepicker__calendar-input-wrapper">
         <span>{{ dateInput.labelStarts }}</span>
         <calendar-input-date
@@ -313,7 +310,7 @@ export default {
     onClickButtonReset() {
       this.selectedStartDate = null;
       this.selectedEndDate = null;
-      this.isAllDay = false;
+      // this.isAllDay = false;
 
       this.$emit('on-reset');
     },
